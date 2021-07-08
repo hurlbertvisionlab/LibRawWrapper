@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+	<metadata>
+		<id>HurlbertVisionLab.LibRawWrapper</id>
+		<version>1.0.1.1</version>
+		<authors>Jan Kučera</authors>
+		<owners>miloush</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<license type="expression">MIT</license>
+		<projectUrl>http://github.com/hurlbertvisionlab/LibRawWrapper/</projectUrl>
+		<description>C++/CLI wrapper containing the LibRaw library for reading RAW files</description>
+		<releaseNotes>This is x64 release package only. Access to makernotes not available.</releaseNotes>
+		<copyright>Copyright © 2021 Jan Kučera</copyright>
+		<tags>libraw dcraw raw photography imaging</tags>
+		<repository type="git" url="https://github.com/hurlbertvisionlab/LibRawWrapper" branch="main" commit="9a7ae4e7d3a86520b0cac2c55e1db2ad61827d48" />
+		<dependencies>
+			<group targetFramework="net46" />
+		</dependencies>
+		<frameworkAssemblies>
+			<frameworkAssembly assemblyName="PresentationCore"  />
+			<frameworkAssembly assemblyName="PresentationFramework" />
+			<frameworkAssembly assemblyName="WindowsBase" />
+		</frameworkAssemblies>
+	</metadata>
+	<files>
+		<file src="LibRawWrapper\bin\Release\x64\HurlbertVisionLab.LibRawWrapper.dll" target="lib\net46" />
+		<file src="LibRawWrapper\bin\Release\x64\HurlbertVisionLab.LibRawWrapper.pdb" target="lib\net46" />
+		<file src="LibRawWrapper\bin\Release\x64\HurlbertVisionLab.LibRawWrapper.xml" target="lib\net46" />
+	</files>
+</package>
