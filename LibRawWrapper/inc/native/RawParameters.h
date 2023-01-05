@@ -50,6 +50,15 @@ namespace HurlbertVisionLab {
 				}
 
 				/// <summary>
+				/// Gets or sets the image number for processing (for formats that contain several RAW images in one file).
+				/// </summary>
+				property int ShotSelect
+				{
+					int get() { return m_params->shot_select; }
+					void set(int value) { m_params->shot_select = value; }
+				}
+
+				/// <summary>
 				/// Gets or sets when to stop processing if raw buffer size grows larger than that value (in megabytes).
 				/// </summary>
 				/// <remarks>
