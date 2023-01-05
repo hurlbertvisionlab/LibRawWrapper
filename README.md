@@ -180,7 +180,7 @@ The C++/CLI wrapper code itself is released under MIT license.
 
 ## Build
 
-The solution builds in Visual Studio 2019 and 2022. The required components are:
-* MSVC v142 - VS 2019 C++ x64/x86 build tools (latest)
-* C++/CLI support for v142 build tools (x86 & x64)
+The solution builds in Visual Studio 2022. The required components are:
+* MSVC v143 - VS 2022 C++ x64/x86 build tools (latest)
+* C++/CLI support for v143 build tools (x86 & x64)
 * Optionally .NET desktop development tools including .NET Framework 4.8 (for the testing projects)
