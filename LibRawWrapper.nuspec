@@ -1,30 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package >
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>HurlbertVisionLab.LibRawWrapper</id>
-		<version>1.0.1.1</version>
+		<version>1.0.2.1</version>
 		<authors>Jan Kučera</authors>
 		<owners>miloush</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<license type="expression">MIT</license>
 		<projectUrl>http://github.com/hurlbertvisionlab/LibRawWrapper/</projectUrl>
-		<description>C++/CLI wrapper containing the LibRaw library for reading RAW files</description>
-		<releaseNotes>This is x64 release package only. Access to makernotes not available.</releaseNotes>
-		<copyright>Copyright © 2021 Jan Kučera</copyright>
+		<description>C++/CLI wrapper containing the LibRaw library for reading RAW files.
+		
+Built with libraw 0.21.1.
+This is x64 release package only.
+Access to makernotes not available.</description>
+		<copyright>Copyright © 2021-2023 Jan Kučera</copyright>
 		<tags>libraw dcraw raw photography imaging</tags>
-		<repository type="git" url="https://github.com/hurlbertvisionlab/LibRawWrapper" branch="main" commit="9a7ae4e7d3a86520b0cac2c55e1db2ad61827d48" />
+		<repository type="git" url="https://github.com/hurlbertvisionlab/LibRawWrapper" branch="main" commit="eab86ad05442f90f747717ee97ae6dc5a1a33416" />
 		<dependencies>
 			<group targetFramework="net46" />
+			<group targetFramework="net6.0-windows7.0" />
 		</dependencies>
+		<frameworkReferences>
+			<group targetFramework="net6.0-windows7.0">
+				<frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+			</group>
+		</frameworkReferences>
 		<frameworkAssemblies>
-			<frameworkAssembly assemblyName="PresentationCore"  />
-			<frameworkAssembly assemblyName="PresentationFramework" />
-			<frameworkAssembly assemblyName="WindowsBase" />
+			<frameworkAssembly targetFramework="net46" assemblyName="PresentationCore" />
+			<frameworkAssembly targetFramework="net46" assemblyName="PresentationFramework" />
+			<frameworkAssembly targetFramework="net46" assemblyName="WindowsBase" />
 		</frameworkAssemblies>
 	</metadata>
 	<files>
 		<file src="LibRawWrapper\bin\Release\x64\HurlbertVisionLab.LibRawWrapper.dll" target="lib\net46" />
 		<file src="LibRawWrapper\bin\Release\x64\HurlbertVisionLab.LibRawWrapper.pdb" target="lib\net46" />
 		<file src="LibRawWrapper\bin\Release\x64\HurlbertVisionLab.LibRawWrapper.xml" target="lib\net46" />
+		
+		<file src="LibRawWrapper\core\bin\Release\x64\HurlbertVisionLab.LibRawWrapperCore.dll" target="lib\net6.0-windows7.0" />
+		<file src="LibRawWrapper\core\bin\Release\x64\HurlbertVisionLab.LibRawWrapperCore.pdb" target="lib\net6.0-windows7.0" />
+		<file src="LibRawWrapper\core\bin\Release\x64\HurlbertVisionLab.LibRawWrapperCore.xml" target="lib\net6.0-windows7.0" />
+		<file src="LibRawWrapper\core\bin\Release\x64\Ijwhost.dll" target="runtimes\win-x64\native" />
 	</files>
 </package>
