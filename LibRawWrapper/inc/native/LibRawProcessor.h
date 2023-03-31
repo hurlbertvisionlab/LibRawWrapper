@@ -61,7 +61,9 @@ namespace HurlbertVisionLab {
 				~LibRawProcessor() // desctructor for managed (implements IDisposable)
 				{
 					m_libraw->set_progress_handler(NULL, NULL);
-					m_progress_callback.Free();
+
+					if (m_progress_callback.IsAllocated)
+						m_progress_callback.Free();
 
 					this->!LibRawProcessor();
 				}
@@ -245,8 +247,8 @@ namespace HurlbertVisionLab {
 
 				/// <summary>
 				/// If LibRaw is compiled with Adobe DNG SDK support and you wish to use this support:
-				/// • you need to create own dng_host object
-				/// • and pass it to LibRaw object using this function.
+				/// ï¿½ you need to create own dng_host object
+				/// ï¿½ and pass it to LibRaw object using this function.
 				/// </summary>
 				/// <param name="dng_host">A pointer to the dng_host object.</param>
 				void SetDngHost(IntPtr dng_host)
@@ -647,7 +649,9 @@ namespace HurlbertVisionLab {
 						if (m_progress_handler == nullptr && !wasNull)
 						{
 							m_libraw->set_progress_handler(NULL, NULL);
-							m_progress_callback.Free();
+
+							if (m_progress_callback.IsAllocated)
+								m_progress_callback.Free();
 						}
 					}
 

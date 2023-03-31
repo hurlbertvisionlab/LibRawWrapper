@@ -170,7 +170,7 @@ namespace HurlbertVisionLab {
 
 						array<Int32Rect^>^ arr = gcnew array<Int32Rect^>(count);
 
-						for (size_t i = 0; i < count; i++)
+						for (int i = 0; i < count; i++)
 							arr[i] = Int32Rect(
 								m_image_sizes->raw_inset_crops[0].cleft,
 								m_image_sizes->raw_inset_crops[0].ctop,

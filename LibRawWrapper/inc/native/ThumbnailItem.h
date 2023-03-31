@@ -85,9 +85,9 @@ namespace HurlbertVisionLab {
 				/// <summary>
 				/// Gets the thumbnail data offset in file.
 				/// </summary>
-				property long ThumbnailOffset
+				property long long ThumbnailOffset
 				{
-					long get() { return m_thumbnail_item->toffset; }
+					long long get() { return m_thumbnail_item->toffset; }
 				}
 
 			internal:
