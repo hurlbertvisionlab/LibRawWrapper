@@ -1,6 +1,6 @@
 ﻿# LibRaw Wrapper (C++/CLI LibRaw)
 
-### .NET Framework assembly for reading and processing RAW images
+### .NET and .NET Framework assembly for reading and processing RAW images
 
 LibRawWrapper is a single-file C++/CLI assembly containing the [LibRaw](https://github.com/libraw/libraw) library for reading RAW files from digital photo cameras (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR, etc, virtually all RAW formats are supported).
 
@@ -57,7 +57,7 @@ Currently the high-level API does not include metadata or color context in the b
 | gamma                     | linear        | linear               | sRGB                  |
 | equivalent dcraw settings | `-4`          | `-D -4`              | `-6 -W -g 2.4 12.92`  |
 
-The `BitmapFrame` can be directly shown in the user interface or encoded into an image file as shown above.
+The `BitmapFrame` can be directly shown in the user interface or encoded into an image file as shown above. Technically `IgnoreColorProfile` and `PreservePixelFormat` can be combined to get access to the raw 16-bit data, however, the `BitmapFrame` would then hold data that should not be directly shown in the user interface, because it doesn't meet the expectations of the `Rgb48` pixel format.
 
 ### Lower-level API
 
