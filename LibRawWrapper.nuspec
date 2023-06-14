@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+	<!-- nuget pack LibRawWarpper.nuspec -->
 	<metadata>
 		<id>HurlbertVisionLab.LibRawWrapper</id>
-		<version>1.0.2.1</version>
+		<version>1.0.2.2</version>
 		<authors>Jan Kučera</authors>
 		<owners>miloush</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -39,6 +40,8 @@ Access to makernotes not available.</description>
 		<file src="LibRawWrapper\core\bin\Release\x64\HurlbertVisionLab.LibRawWrapperCore.dll" target="lib\net6.0-windows7.0" />
 		<file src="LibRawWrapper\core\bin\Release\x64\HurlbertVisionLab.LibRawWrapperCore.pdb" target="lib\net6.0-windows7.0" />
 		<file src="LibRawWrapper\core\bin\Release\x64\HurlbertVisionLab.LibRawWrapperCore.xml" target="lib\net6.0-windows7.0" />
-		<file src="LibRawWrapper\core\bin\Release\x64\Ijwhost.dll" target="runtimes\win-x64\native" />
+		<file src="LibRawWrapper\core\bin\Release\x64\Ijwhost.dll" target="build" />
+		
+		<file src="LibRawWrapper.targets" target="build\HurlbertVisionLab.LibRawWrapper.targets" />
 	</files>
 </package>
