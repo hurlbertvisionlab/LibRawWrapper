@@ -11,7 +11,7 @@ namespace HurlbertVisionLab {
 		namespace Native
 		{
 			/// <summary>
-			/// Desribes all parameters associated with the preview saved in the RAW file.
+			/// Describes all parameters associated with the preview saved in the RAW file.
 			/// </summary>
 			public ref class Thumbnail
 			{

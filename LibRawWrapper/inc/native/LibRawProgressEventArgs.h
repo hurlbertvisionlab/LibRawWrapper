@@ -16,7 +16,7 @@ namespace HurlbertVisionLab {
 			{
 			public:
 				/// <summary>
-				/// Initializes a new instance of the LibRawProgressEventArgs class.
+				/// Initializes a new instance of the <see cref="LibRawProgressEventArgs" /> class.
 				/// </summary>
 				/// <param name="stage">Current processing stage.</param>
 				/// <param name="iteration">Iteration number within current stage.</param>

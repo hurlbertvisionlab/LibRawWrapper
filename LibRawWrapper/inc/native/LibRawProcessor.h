@@ -307,14 +307,15 @@ namespace HurlbertVisionLab {
 					return arr;
 				}
 
-				void SetRawSpeedCameraFile(String^ pathToCamerasXml)
-				{
-					char* path = StringToChar(pathToCamerasXml);
-					int result = m_libraw->set_rawspeed_camerafile(path);
+				// removed in 202403 snapshot, needs building with RawSpeed anyway
+				//void SetRawSpeedCameraFile(String^ pathToCamerasXml)
+				//{
+				//	char* path = StringToChar(pathToCamerasXml);
+				//	int result = m_libraw->set_rawspeed_camerafile(path);
 
-					if (result)
-						throw gcnew InvalidOperationException();
-				}
+				//	if (result)
+				//		throw gcnew InvalidOperationException();
+				//}
 
 
 				/// <summary>
@@ -482,7 +483,7 @@ namespace HurlbertVisionLab {
 				}
 
 				/// <summary>
-				/// Promotes <see cref="ImageSizes.RawInsetCrops" /> values to <see cref="ImageSizes.Rect" />.
+				/// Promotes <see cref="HurlbertVisionLab.LibRawWrapper.Native.ImageSizes.RawInsetCrops" /> values to <see cref="HurlbertVisionLab.LibRawWrapper.Native.ImageSizes.Rect" />.
 				/// </summary>
 				/// <param name="mask">If bit 1 is set, prefer Sizes.RawInsetCrops[1]; if bit 0 is set, prefer Sizes.RawInsetCrops[0].</param>
 				/// <param name="maxcrop">Limits crop to not less than (original width/height)*maxcrop; if Sizes.RawInsetCrops[i] data results in tighter crop, than this item is ignored.</param>
